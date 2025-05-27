@@ -5,9 +5,9 @@ import json
 app = Flask(__name__)
 CORS(app)  # Allow all origins
 
-@app.route("/")
+@app.route("/hello")
 def home():
-    return "Hello, World!"
+    return jsonify({"user": "Jaine", "id": 1})
 
 @app.route("/api/data")
 def get_data():
